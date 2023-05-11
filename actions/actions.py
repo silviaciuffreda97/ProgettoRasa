@@ -28,23 +28,14 @@ class ActionInfoLibro(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         titolo_libro = str(tracker.get_slot('nome_libro')).lower()  # Nome dello slot da prendere: nome_libro
-
-        if isinstance(titolo_libro, str):
-          titolo = titolo_libro
-        else:
-            titolo_entity = next((entity for entity in tracker.latest.message.get('entities') if entity.get('entity') == 'nome_libro'), None) 
-            if titolo_entity:
-                titolo = titolo_entity.get('value')
-            else:
-                 titolo = None
   
         libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=",")
 
         try:
-            autore = libro[libro['Titolo'] == titolo]['Autore'].values[0]
-            message = f"L'autore del libro '{titolo}' è: {autore}."
+            autore = libro[libro['Titolo'] == titolo_libro]['Autore'].values[0]
+            message = f"L'autore del libro '{titolo_libro}' è: {autore}."
         except:
-            message = f"Mi dispiace, non sono riuscito a trovare informazioni sull'autore del libro '{titolo}'."
+            message = f"Mi dispiace, non sono riuscito a trovare informazioni sull'autore del libro '{titolo_libro}'."
 
         dispatcher.utter_message(text=message)
 

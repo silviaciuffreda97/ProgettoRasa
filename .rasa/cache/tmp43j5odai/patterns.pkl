@@ -1,0 +1,10 @@
+[
+  {
+    "name": "nome_libro",
+    "pattern": "(\\b1984\\b|\\bIl\\ nome\\ della\\ rosa\\b|\\bLa\\ divina\\ commedia\\b|\\bDon\\ Chisciotte\\b|\\bGuerra\\ e\\ pace\\b)"
+  },
+  {
+    "name": "nome_libro",
+    "pattern": "(\\b1984\\b|\\bil\\ nome\\ della\\ rosa\\b|\\bla\\ divina\\ commedia\\b|\\bdon\\ chisciotte\\b|\\bguerra\\ e\\ pace\\b|\\bil\\ gattopardo\\b|\\bmoby\\ dick\\b|\\bl'idiota\\b|\\bcime\\ tempestose\\b|\\bil\\ conte\\ di\\ Montecristo\\b|\\bil\\ rosso\\ e\\ il\\ nero\\b|\\bmadame\\ bovary\\b|\\banna\\ karenina\\b|\\borgoglio\\ e\\ pregiudizio\\b|\\bil\\ signore\\ degli\\ anelli\\b|\\bil\\ piccolo\\ principe\\b|\\bcent'anni\\ di\\ solitudine\\b|\\blolita\\b)"
+  }
+]

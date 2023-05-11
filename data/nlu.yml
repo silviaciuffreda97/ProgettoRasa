@@ -177,17 +177,23 @@ nlu:
     - puoi darmi informazioni sul libro [il nome della rosa](nome_libro)
     - vorrei sapere qualcosa sul libro [la divina commedia](nome_libro)
     - vorrei informazioni sul libro [il gattopardo](nome_libro)
-    - vorrei più info riguardo il libro [il rosso e il nero](nome_libro)
+    - vorrei più info riguardo il libro [se questo è un uomo](nome_libro)
     - informazioni sul libro [la divina commedia](nome_libro)
     - mi sai dire qualcosa su [il gattopardo](nome_libro)
     - vorrei sapere di più su [moby dick](nome_libro)
     - puoi dirmi qualcosa sul libro [cime tempestose](nome_libro)
     - potresti dirmi qualcosa sul libro [don chisciotte](nome_libro)
     - voglio informazioni su [guerra e pace](nome_libro)
-    - voglio sapere tutto su [il conte di montecristo](nome_libro)
+    - voglio sapere tutto su [il cacciatore di aquiloni](nome_libro)
     - fammi conoscere i dettagli di [madame bovary](nome_libro)
     - che cosa mi puoi dire su [l'idiota](nome_libro)
     - puoi darmi maggiori informazioni su [la divina commedia](nome_libro)
+    - mi sai dire qualcosa su [l'idiota](nome_libro)
+    - vorrei sapere di più su [se questo è un uomo](nome_libro)
+    - puoi dirmi qualcosa sul libro [il gattopardo](nome_libro)
+    - fammi conoscere i dettagli di [il cacciatore di aquiloni](nome_libro)
+    - vorrei più info riguardo il libro [cent'anni di solitudine](nome_libro)
+
 
 - lookup: nome_libro
   examples: |
@@ -200,8 +206,8 @@ nlu:
     - moby dick
     - l'idiota
     - cime tempestose
-    - il conte di Montecristo
-    - il rosso e il nero
+    - il cacciatore di aquiloni
+    - se questo è un uomo
     - madame bovary
     - anna karenina
     - orgoglio e pregiudizio
