@@ -1,0 +1,109 @@
+version: "3.1"
+
+intents:
+  - saluto
+  - goodbye
+  - affermazione
+  - negazione
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - servizi
+  - eventi
+  - info_biblioteca
+  - info_ok
+  - orario
+  - rent_book
+  - inform
+  - info_libro:
+        use_entities: true
+
+responses:
+  utter_saluto:
+  - text: "Ciao caro, sono il bot della libreria. Puoi chiedermi informazioni sulla biblioteca e quali servizi offriamo."
+
+  utter_goodbye:
+  - text: "Arrivederci, a presto."
+
+  utter_iamabot:
+  - text: "CIao! Sono un bot di proprietà Rasa."
+
+  utter_happy:
+  - text: "Beato te!"
+
+  utter_cheer_up:
+  - text: "Potresti prendere in prestito un libro dalla biblioteca."
+
+  utter_did_that_help:
+  - text: "Che ne pensi di questa proposta?"
+    
+  utter_riformula:
+  - text: "Non ho capito caro, potresti riformulare?"
+
+  utter_no_psi:
+  - text: "Mi dispiace di non esserti stato utile."
+
+  utter_si_psi:
+  - text: "Non c'è di che ;)"
+
+  utter_servizi:
+  - text: "La biblioteca offre servizi di prestito libri ed organizza vari eventi. A cosa sei interessato?"
+
+  utter_eventi:
+  - text: "Il prossimo evento si terrà a Luglio 2023."
+
+  utter_info_biblioteca:
+  - text: "La biblioteca è stata fondata nel 1919 nel comune di Ancona, in via San Benedetto. "
+
+  utter_info_ok:
+  - text: "Sono contento di esserti stato utile. Rimango qui a tua disposizione."
+
+  utter_orario:
+  - text: "La biblioteca è aperta dal Lunedì al Venerdì dalle ore 9:00 alle 18:00."
+
+entities:
+- nome_libro
+- nome_autore
+
+slots:
+  nome_libro:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nome_libro
+  nome_autore:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nome_autore
+
+actions:
+  - utter_saluto
+  - utter_goodbye
+  - utter_iamabot
+  - utter_happy
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_riformula
+  - utter_no_psi
+  - utter_si_psi
+  - utter_servizi
+  - utter_eventi
+  - utter_info_biblioteca
+  - utter_info_ok
+  - utter_orario
+  - action_info_libro
+
+forms:
+  rent_book_form:
+    required_slots:
+      - nome_libro
+      - nome_autore 
+
+config:
+    store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

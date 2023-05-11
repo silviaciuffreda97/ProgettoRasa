@@ -1,0 +1,9 @@
+version: "3.0"
+nlu:
+  - lookup: nome_autore
+    examples: |
+      - George Orwell
+      - Umberto Eco
+      - Dante Alighieri
+      - Miguel de Cervantes
+      - Lev Tolstoj

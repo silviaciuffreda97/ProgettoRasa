@@ -1,0 +1,6 @@
+2023-05-08 13:57:57,500 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-08 13:58:00,184 [INFO ]  Loading model models/20230508-121354-plum-model.tar.gz...
+2023-05-08 13:58:00,730 [INFO ]  Trying to load SpaCy model with name 'it_core_news_md'.
+2023-05-08 13:58:03,165 [INFO ]  Trying to load SpaCy model with name 'it_core_news_md'.
+2023-05-08 13:59:34,919 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2023-05-08 14:00:01,385 [INFO ]  Rasa server is up and running.

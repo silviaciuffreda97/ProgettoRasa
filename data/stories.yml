@@ -1,0 +1,88 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: saluto
+  - action: utter_saluto
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: saluto
+  - action: utter_saluto
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affermazione
+  - action: utter_si_psi
+
+- story: sad path 2
+  steps:
+  - intent: saluto
+  - action: utter_saluto
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: negazione
+  - action: utter_no_psi
+
+- story: servizi eventi path 1
+  steps: 
+  - intent: saluto
+  - action: utter_saluto
+  - intent: servizi
+  - action: utter_servizi
+  - intent: eventi
+  - action: utter_eventi
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: servizi eventi path 2
+  steps: 
+  - intent: servizi
+  - action: utter_servizi
+  - intent: eventi
+  - action: utter_eventi
+  - intent: orario
+  - action: utter_orario
+
+- story: servizi prestito libri path 1
+  steps: 
+  - intent: saluto
+  - action: utter_saluto
+  - intent: servizi
+  - action: utter_servizi
+  - intent: rent_book
+  - action: rent_book_form
+  - active_loop: rent_book_form
+
+- story: informazioni libro 
+  steps: 
+  - intent: saluto
+  - action: utter_saluto
+  - intent: info_libro
+    entities:
+    - nome_libro: "la divina commedia"
+  - action: action_info_libro
+
+- story: informazioni libro 
+  steps: 
+  - intent: saluto
+  - action: utter_saluto
+  - intent: info_libro
+    entities:
+    - nome_libro: "il nome della rosa"
+  - action: action_info_libro
+
+- story: informazioni libro 
+  steps: 
+  - intent: saluto
+  - action: utter_saluto
+  - intent: info_libro
+    entities:
+    - nome_libro: "guerra e pace"
+  - action: action_info_libro
+    

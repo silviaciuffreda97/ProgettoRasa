@@ -1,0 +1,195 @@
+version: "3.1"
+
+nlu:
+- intent: saluto
+  examples: |
+    - ciao
+    - oh
+    - ehi
+    - we
+    - cia
+    - salve
+    - buon giorno
+    - buon pomeriggio
+    - buona sera
+    - buondi
+    - wei
+    - ue
+    - cia
+
+- intent: goodbye
+  examples: |
+    - Addio
+    - A presto
+    - Ci vediamo
+    - Alla prossima
+    - Buona giornata
+    - Buona serata
+    - Arrivederci
+    - Ciao, ci sentiamo presto
+    - Buona giornata, alla prossima
+    - Ci vediamo, è stato un piacere parlare con te
+    - A presto, grazie ancora
+
+- intent: bot_challenge
+  examples: |
+    - sei un bot?
+    - sei un umano?
+    - sto parlando con un bot?
+    - sto parlando con un umano?
+    - sei vivo?
+    - chi sei?
+
+- intent: affermazione
+  examples: |
+    - yes
+    - y
+    - si
+    - ovvio
+    - coretto
+    - certamente
+
+- intent: negazione
+  examples: |
+    - no
+    - n
+    - mai
+    - non credo
+    - non mi piace
+    - nah
+    - none
+    - nu
+    - veramente no
+
+- intent: mood_great
+  examples: |
+    - Sto bene
+    - Sono felice
+    - Sono contento
+    - Sono soddisfatto
+    - Mi sento bene
+    - Sono allegro
+
+- intent: mood_unhappy
+  examples: |
+    - Non mi sento bene
+    - Sono triste
+    - Sono stressato
+    - Sono arrabbiato
+    - Sono preoccupato
+    - Sono emotivo
+    - sono giù
+    - non sto bene
+    - sto male
+    - mi gira la testa
+    - mi viene da vomitare
+
+- intent: info_biblioteca
+  examples: |
+    - dimmi qualcosa sulla biblioteca
+    - che blibioteca è?
+    - dove si trova la biblioteca
+    - da quanto esiste la bibliteca?
+    - parlami della biblioteca
+    - dove vi trovate?
+    - parlami della biblioteca
+    - descrivimi la biblioteca
+
+- intent: servizi
+  examples: |
+    - che servizi offri?
+    - di che ti occupi?
+    - che servizi offre la biblioteca?
+    - che lavoro svolgi?
+    - che servizi offrite?
+
+- intent: eventi
+  examples: |
+    - che eventi ci sono in programma?
+    - che eventi ci sono?
+    - quando c'è il prossimo evento?
+    - dimmmi il prossimo evento?
+    - qual è il prossimo evento?
+    - quando ci sarà il prossimo evento?
+    - c'è qualche evento in programma?
+
+- intent: info_ok
+  examples: |
+    - ok grazie
+    - capito
+    - le inforazioni sono chiare
+    - va bene grazie
+    - grazie sei stato utile
+
+- intent: orario
+  examples: |
+    - a che ora apre la biblioteca?
+    - mi puoi dire gli orari di apertura?
+    - mi dici l'orario?
+    - quando siete aperti?
+    - che orario fa la biblioteca?
+    - siete aperti?
+    - la biblioteca è chiusa?
+    - qual è l'orario di apertura?
+    - che giorni siete aperti?
+
+- intent: rent_book
+  examples: |
+    - vorrei prendere in prestito un libro
+    - avete dei libri da dare in prestito?
+    - che libri avete?
+    - voglio prendere un libro in prestito
+    - vorrei qualcosa da leggere
+    - Si potrebbe Prendere a prestito un libro dalla biblioteca?
+    - Affittare un libro dalla biblioteca
+    - Vorrei richiedere in prestito un libro
+    - Mi piacerebbe Prenotare un libro in prestito
+    - Si potrebbe Estrarre un libro dalla biblioteca
+    - Mi piacerebbe Acquistare il diritto di prestito di un libro
+    - Avrei la necessità di Borrare un libro dalla biblioteca per un periodo di tempo
+    - Potrei Ottenere l'autorizzazione di prestito di un libro
+    - Voglio richiedere il prestito temporaneo di un libro
+    - vorrei prenotare un libro
+
+- intent: inform
+  examples: |
+    - Vorrei prendere in prestito [1984](nome_libro) di [George Orwell](nome_autore).
+    - Sarei interessato a leggere '[Cime tempestose](nome_libro)' di [Emily Brontë](nome_autore). Potrei prenderlo in prestito?
+    - Mi piacerebbe leggere [Il Signore degli Anelli](nome_libro) di [J.R.R. Tolkien](nome_autore). Potrei prenderlo in prestito?
+    - Vorrei leggere '[Harry Potter e la Pietra Filosofale](nome_libro)' di [J.K. Rowling](nome_autore). C'è disponibilità per un prestito?
+    - Sono alla ricerca di '[Il nome della rosa](nome_libro)' di [Umberto Eco](nome_autore). Potrei prenderlo in prestito dalla biblioteca?
+    - Mi piacerebbe prendere in prestito [Il Gattopardo](nome_libro) di [Giuseppe Tomasi di Lampedusa](nome_autore). È disponibile in biblioteca?
+    - Vorrei leggere '[Moby Dick](nome_libro)' di [Herman Melville](nome_autore). Potrei prenderlo in prestito?
+    - "Vorrei prendere in prestito [To Kill a Mockingbird](nome_libro) di [Harper Lee](nome_autore).
+    - Sarei interessato a leggere [Pride and Prejudice](nome_libro) di [Jane Austen](nome_autore). È possibile prenderlo in prestito?
+    - Mi piacerebbe leggere [The Catcher in the Rye](nome_libro) di [J.D. Salinger](nome_autore). Potrei prenderlo in prestito?
+    - Vorrei leggere '[The Great Gatsby](nome_libro)' di [F. Scott Fitzgerald](nome_autore). È disponibile in biblioteca?
+    - Sono alla ricerca di [One Hundred Years of Solitude](nome_libro) di [Gabriel García Márquez](nome_autore). Potrei prenderlo in prestito?
+    - Mi piacerebbe prendere in prestito '[Crime and Punishment](nome_libro)' di [Fyodor Dostoevsky](nome_autore). È disponibile in biblioteca?
+    - Vorrei leggere '[War and Peace](nome_libro)' di [Leo Tolstoy](nome_autore). Potrei prenderlo in prestito?
+    - Sarei interessato a leggere '[The Hobbit](nome_libro)' di [J.R.R. Tolkien](nome_autore). È disponibile in biblioteca?
+
+- intent: info_libro
+  examples: |
+    - vorrei informazioni sul libro [1984](nome_libro)
+    - sarei interessato a più informazioni sul libro [la divina commedia](nome_libro)
+    - vorrei più info riguardo il libro [cime tempestose](nome_libro)
+    - puoi darmi informazioni sul libro [il nome della rosa](nome_libro)
+    - vorrei sapere qualcosa sul libro [la divina commedia](nome_libro)
+    - vorrei informazioni sul libro [il gattopardo](nome_libro)
+    - vorrei più info riguardo il libro [il rosso e il nero](nome_libro)
+
+- lookup: nome_libro
+  examples: |
+    - 1984
+    - il nome della rosa
+    - la divina commedia
+    - Don Chisciotte
+    - guerra e pace
+    - il Gattopardo
+    - Moby Dick
+    - L'idiota
+    - cime tempestose
+    - Il conte di Montecristo
+    - Il rosso e il nero
+    - Madame Bovary
