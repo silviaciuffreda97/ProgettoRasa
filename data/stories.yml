@@ -59,7 +59,7 @@ stories:
   - action: rent_book_form
   - active_loop: rent_book_form
 
-- story: informazioni libro 
+- story: informazioni libro 1
   steps: 
   - intent: saluto
   - action: utter_saluto
@@ -68,7 +68,7 @@ stories:
     - nome_libro: "la divina commedia"
   - action: action_info_libro
 
-- story: informazioni libro 
+- story: informazioni libro 2
   steps: 
   - intent: saluto
   - action: utter_saluto
@@ -77,7 +77,7 @@ stories:
     - nome_libro: "il nome della rosa"
   - action: action_info_libro
 
-- story: informazioni libro 
+- story: informazioni libro 3
   steps: 
   - intent: saluto
   - action: utter_saluto
@@ -85,4 +85,34 @@ stories:
     entities:
     - nome_libro: "guerra e pace"
   - action: action_info_libro
+
+- story: informazione libro 4
+  steps:
+  - intent: saluto
+  - action: utter_saluto
+  - intent: mood_great
+  - action: utter_happy
+  - intent: info_libro
+    entities:
+    - nome_libro: "orgoglio e pregiudizio"
+  - action: action_info_libro
+
+- story: informazione libro 5
+  steps:
+  - intent: saluto
+  - action: utter_saluto
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affermazione
+  - action: utter_si_psi
+  - intent: info_libro
+    entities:
+    - nome_libro: "l'idiota"
+  - action: action_info_libro
+
+  
+
+
+
     
