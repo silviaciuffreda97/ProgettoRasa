@@ -22,7 +22,7 @@ pipeline:
   # retrieve the same vector, if set to `False`. For some
   # applications and models it makes sense to differentiate
   # between these two words, therefore setting this to `True`.
-  case_sensitive: false
+  case_sensitive: False
   stop_words:
       - "il"
       - "i"
@@ -61,7 +61,10 @@ pipeline:
   # the complete utterance. Available options: 'mean' and 'max'.
   "pooling": "mean"
 
+#componente di elaborazione del linguaggio naturale utilizzato per estrarre informazioni specifiche dal testo utilizzando espressioni regolari, 
+#al fine di addestrare modelli di apprendimento automatico per compiti come la classificazione del testo o l'estrazione di informazioni.
 - name: "RegexFeaturizer"
+#componente NLP utilizzato per estrarre entità nominative da un testo utilizzando un modello basato su CRF
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "SklearnIntentClassifier"

@@ -1,19 +1,23 @@
-Titolo,Autore
-1984,George Orwell
-il nome della rosa,Umberto Eco
-la divina commedia,Dante Alighieri
-don chisciotte,Miguel de Cervantes
-guerra e pace,Lev Tolstoj
-il gattopardo,Tomasi di Lampedusa
-moby dick,Herman Melville
-l'idiota,Fedor Dostoevskij
-cime tempestose,Emily Bronte
-il cacciatore di aquiloni,Khaled Hosseini
-se questo è un uomo,Primo Levi
-madame bovary,Gustave Flaubert
-anna karenina,Lev Tolstoj
-orgoglio e pregiudizio,Jane Austen
-il signore degli anelli,J.R.R. Tolkien
-il piccolo principe,Antoine de Saint-Exupery
-cent'anni di solitudine,Gabriel Garcia Marquez
-lolita,Vladimir Nabokov
+﻿Titolo;Autore;Genere;Età;Prezzo;Descrizione
+1984;George Orwell;romanzo distopico;16+;10.99;un classico della letteratura che immagina un futuro in cui il governo totalitario controlla ogni aspetto della vita dei cittadini. Il protagonista, Winston Smith, è un uomo che lavora nel Ministero della Verità, responsabile della manipolazione della storia e della censura dei contenuti. Tuttavia, Winston inizia a nutrire una crescente insoddisfazione per il sistema oppressivo e si ribella segretamente contro di esso.
+il nome della rosa;Umberto Eco;Romanzo,giallo;18+;14.99;Un romanzo ambientato in un monastero medievale, in cui un frate e un novizio indagano su una serie di misteriosi omicidi.
+la divina commedia;Dante Alighieri;Poesia;14+;9.99;Un'epopea poetica che narra il viaggio dell'anima attraverso Inferno, Purgatorio e Paradiso.
+don chisciotte;Miguel de Cervantes;Romanzo;12+;12.99;Le avventure di un cavaliere idealista e del suo scudiero, che si imbarcano in missioni eroiche.
+guerra e pace;Lev Tolstoj;Romanzo;18+;15.99;Un'epica storia che si svolge durante le guerre napoleoniche, con un intreccio di personaggi e vicende.
+il gattopardo;Tomasi di Lampedusa;Romanzo;16+;11.99;La storia di una nobile famiglia siciliana durante l'unificazione italiana nel XIX secolo.
+moby dick;Herman Melville;Romanzo;14+;10.99;Le avventure di un capitano di nave e la sua ossessione per la caccia alla balena bianca.
+l'idiota;Fedor Dostoevskij;Romanzo;18+;13.99;Il ritratto di un giovane principe che, nonostante la sua ingenuità, affronta il mondo corrotto della società russa.
+cime tempestose;Emily Bronte;Romanzo,romantico;16+;10.99;Una storia di amore, gelosia e vendetta ambientata nella brughiera inglese.
+il cacciatore di aquiloni;Khaled Hosseini;Romanzo;14+;12.99;Un romanzo che esplora l'amicizia, il tradimento e la redenzione in Afghanistan durante un periodo di conflitto.
+se questo è un uomo;Primo Levi;Memorie,saggio;16+;9.99;Le memorie dell'autore, un sopravvissuto all'Olocausto, che riflette sulla vita nei campi di concentramento nazisti.
+madame bovary;Gustave Flaubert;Romanzo;18+;11.99;La storia di Emma Bovary, una donna insoddisfatta che cerca la felicità attraverso avventure amorose.
+anna karenina;Lev Tolstoj;Romanzo;16+;10.99;Le vicende di una donna che si trova coinvolta in un amore proibito e le conseguenze che ciò comporta.
+il signore delle mosche;William Golding;Romanzo;14+;9.99;Un gruppo di ragazzi naufragati su un'isola deserta cerca di organizzarsi, ma il potere e la violenza prendono il sopravvento.
+il vecchio e il mare;Ernest Hemingway;Romanzo;16+;8.99;La storia di un anziano pescatore cubano che si imbatte in una lotta epica con un grande pesce marlin.
+il giovane holden;J.D. Salinger;Romanzo;14+;10.99;Le avventure e le riflessioni di un giovane ribelle che cerca di farsi strada nel mondo degli adulti.
+la storia infinita;Michael Ende;Romanzo;12+;11.99;Un giovane lettore si trova coinvolto in una magica avventura nel mondo dei libri.
+il grande gatsby;F. Scott Fitzgerald;Romanzo;16+;12.99;La storia di Jay Gatsby, un uomo misterioso e affascinante, durante gli anni ruggenti dell'America del dopoguerra.
+cent'anni di solitudine;Gabriel Garcia Marquez;Romanzo;18+;15.99;La saga della famiglia Buendia attraverso sette generazioni, in un'atmosfera di realtà e mito.
+il conte di montecristo;Alexandre Dumas;Romanzo;16+;13.99;La storia di Edmond Dantès, un giovane marinaio ingiustamente imprigionato, che cerca vendetta e redenzione.
+il signore degli anelli;J.R.R. Tolkien;Romanzo;14+;14.99;Un'epica avventura nella Terra di Mezzo, in cui un gruppo di eroi si imbarca in una missione per distruggere un potente anello.
+orgoglio e pregiudizio;Jane Austen;Romanzo;16+;11.99;La storia di Elizabeth Bennet e il suo tumultuoso rapporto con il ricco e orgoglioso signor Darcy.
