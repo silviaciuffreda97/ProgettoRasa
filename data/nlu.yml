@@ -194,6 +194,31 @@ nlu:
     - fammi conoscere i dettagli di [il cacciatore di aquiloni](nome_libro)
     - vorrei più info riguardo il libro [cent'anni di solitudine](nome_libro)
 
+- intent: info_prezzo
+  examples: |
+    - quanto costa il libro?
+    - mi puoi dire il prezzo del libro?
+    - qual è il costo del libro?
+    - a quanto viene il libro?
+    - sapresti dirmi quanto devo pagare per il libro?
+
+- intent: info_età_consigliata
+  examples: |
+     - a quale età è consigliato leggere questo libro?
+     - qual è la fascia d'età raccomandata per questo libro?
+     - posso sapere per quale fascia d'età è adatto questo libro?
+     - chi è il target di lettura per questo libro?
+     - questo libro è adatto a quali gruppi di età?
+
+- intent: info_reparto
+  examples: |
+    - in quale reparto posso trovare questo libro?
+    - a quale scaffale devo andare per trovare questo libro?
+    - mi puoi dire in quale reparto si trova il libro?
+    - mi sai dire reparto e scaffale di questo libro?
+    - sai dirmi a quale scaffale appartiene il libro?
+
+
 
 - lookup: nome_libro
   examples: |

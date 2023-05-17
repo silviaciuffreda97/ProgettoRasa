@@ -67,24 +67,13 @@ stories:
     entities:
     - nome_libro: "la divina commedia"
   - action: action_info_libro
-
-#- story: informazioni libro path 2
-#  steps: 
-#  - intent: saluto
-#  - action: utter_saluto
-#  - intent: info_libro
-#    entities:
-#    - nome_libro: "il nome della rosa"
-#  - action: action_info_libro
-
-#- story: informazioni libro 3
-#  steps: 
-#  - intent: saluto
-#  - action: utter_saluto
-#  - intent: info_libro
-#    entities:
-#    - nome_libro: "guerra e pace"
-#  - action: action_info_libro
+  - intent: info_età_consigliata
+  - action: action_info_età_consigliata
+  - intent: info_prezzo
+  - action: action_info_prezzo
+  - intent: info_reparto
+  - action: action_info_reparto
+  
 
 - story: informazione libro 2
   steps:
@@ -96,6 +85,14 @@ stories:
     entities:
     - nome_libro: "orgoglio e pregiudizio"
   - action: action_info_libro
+  - intent: info_età_consigliata
+  - action: action_info_età_consigliata
+  - intent: info_prezzo
+  - action: action_info_prezzo
+  - intent: info_reparto
+  - action: action_info_reparto
+  
+
 
 - story: informazione libro 3
   steps:
@@ -110,6 +107,14 @@ stories:
     entities:
     - nome_libro: "l'idiota"
   - action: action_info_libro
+  - intent: info_età_consigliata
+  - action: action_info_età_consigliata
+  - intent: info_prezzo
+  - action: action_info_prezzo
+  - intent: info_reparto
+  - action: action_info_reparto
+ 
+
 
   
 

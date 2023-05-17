@@ -47,3 +47,18 @@ rules:
   steps:
   - intent: info_libro
   - action: action_info_libro
+
+- rule: Restituisce il prezzo del libro 
+  steps: 
+  - intent: info_prezzo
+  - action: action_info_prezzo
+
+- rule: Restituisce l'età consigliata del libro 
+  steps: 
+  - intent: info_età_consigliata
+  - action: action_info_età_consigliata
+
+- rule: Restituisce il reparto del libro 
+  steps: 
+  - intent: info_reparto
+  - action: action_info_reparto

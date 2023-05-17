@@ -17,6 +17,9 @@ intents:
   - inform
   - info_libro:
         use_entities: true
+  - info_prezzo
+  - info_età_consigliata
+  - info_reparto
 
 responses:
   utter_saluto:
@@ -61,6 +64,16 @@ responses:
   utter_orario:
   - text: "La biblioteca è aperta dal Lunedì al Venerdì dalle ore 9:00 alle 18:00."
 
+  utter_more_info:
+  - text: "Per ulteriori informazioni ti consiglio di rivolgerti al personale della libreria."
+
+  utter_another_question:
+  - text: "Che altro vuoi sapere?"
+  - text: "Chiedimi qualcos'altro"
+  - text: "Puoi chiedermi altro, se vuoi"
+  - text: "Fammi un'altra domanda"
+
+
 entities:
 - nome_libro
 - nome_autore
@@ -78,6 +91,7 @@ slots:
     mappings:
     - type: from_entity
       entity: nome_autore
+  
 
 actions:
   - utter_saluto
@@ -95,6 +109,11 @@ actions:
   - utter_info_ok
   - utter_orario
   - action_info_libro
+  - action_info_prezzo
+  - utter_another_question
+  - action_info_età_consigliata
+  - action_info_reparto
+  - utter_more_info
 
 forms:
   rent_book_form:
