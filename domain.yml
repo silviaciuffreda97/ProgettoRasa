@@ -108,12 +108,13 @@ actions:
   - utter_info_biblioteca
   - utter_info_ok
   - utter_orario
-  - action_info_libro
+ # - action_info_libro
   - action_info_prezzo
   - utter_another_question
   - action_info_età_consigliata
   - action_info_reparto
   - utter_more_info
+  - action_find_info_libro
 
 forms:
   rent_book_form:

@@ -1,0 +1,6 @@
+[
+  {
+    "name": "nome_libro",
+    "pattern": "(\\b1984\\b|\\bil\\ nome\\ della\\ rosa\\b|\\bla\\ divina\\ commedia\\b|\\bdon\\ Chisciotte\\b|\\bguerra\\ e\\ pace\\b|\\bil\\ gattopardo\\b|\\bmoby\\ dick\\b|\\bl'idiota\\b|\\bcime\\ tempestose\\b|\\bil\\ cacciatore\\ di\\ aquiloni\\b|\\bse\\ questo\\ è\\ un\\ uomo\\b|\\bmadame\\ bovary\\b|\\banna\\ karenina\\b|\\borgoglio\\ e\\ pregiudizio\\b|\\bil\\ signore\\ degli\\ anelli:\\ la\\ compagnia\\ dell'anello\\b|\\bil\\ signore\\ degli\\ anelli:\\ le\\ due\\ torri\\b|\\bil\\ signore\\ degli\\ anelli:\\ il\\ ritorno\\ del\\ re\\b|\\bcent'anni\\ di\\ solitudine\\b|\\blolita\\b|\\bil\\ signore\\ delle\\ mosche\\b|\\bil\\ vecchio\\ e\\ il\\ mare\\b|\\bil\\ giovane\\ holden\\b|\\bla\\ storia\\ infinita\\b|\\bil\\ grande\\ gatsby\\b|\\bil\\ conte\\ di\\ montecristo\\b)"
+  }
+]

@@ -46,7 +46,8 @@ rules:
 - rule: Restituisce informazioni sui libri
   steps:
   - intent: info_libro
-  - action: action_info_libro
+  - action: action_find_info_libro
+#  - action: action_info_libro
 
 - rule: Restituisce il prezzo del libro 
   steps: 

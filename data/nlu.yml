@@ -175,24 +175,32 @@ nlu:
     - sarei interessato a più informazioni sul libro [la divina commedia](nome_libro)
     - vorrei più info riguardo il libro [cime tempestose](nome_libro)
     - puoi darmi informazioni sul libro [il nome della rosa](nome_libro)
-    - vorrei sapere qualcosa sul libro [la divina commedia](nome_libro)
     - vorrei informazioni sul libro [il gattopardo](nome_libro)
     - vorrei più info riguardo il libro [se questo è un uomo](nome_libro)
-    - informazioni sul libro [la divina commedia](nome_libro)
-    - mi sai dire qualcosa su [il gattopardo](nome_libro)
     - vorrei sapere di più su [moby dick](nome_libro)
-    - puoi dirmi qualcosa sul libro [cime tempestose](nome_libro)
     - potresti dirmi qualcosa sul libro [don chisciotte](nome_libro)
     - voglio informazioni su [guerra e pace](nome_libro)
     - voglio sapere tutto su [il cacciatore di aquiloni](nome_libro)
     - fammi conoscere i dettagli di [madame bovary](nome_libro)
-    - che cosa mi puoi dire su [l'idiota](nome_libro)
-    - puoi darmi maggiori informazioni su [la divina commedia](nome_libro)
     - mi sai dire qualcosa su [l'idiota](nome_libro)
-    - vorrei sapere di più su [se questo è un uomo](nome_libro)
-    - puoi dirmi qualcosa sul libro [il gattopardo](nome_libro)
-    - fammi conoscere i dettagli di [il cacciatore di aquiloni](nome_libro)
     - vorrei più info riguardo il libro [cent'anni di solitudine](nome_libro)
+    - puoi darmi maggiori informazioni su [il signore degli anelli-la compagnia dell'anello](nome_libro)
+    - mi sai dire qualcosa su [il signore degli anelli-il ritorno del re](nome_libro)
+    - sapresti dirmi qualcosa sul libro [la divina commedia](nome_libro)
+    - sono curioso di sapere di più sul libro [cent'anni di solitudine](nome_libro)
+    - quali sono le caratteristiche principali di [se questo è un uomo](nome_libro)
+    - posso avere informazioni sul contenuto di [il gattopardo](nome_libro)?
+    - vorrei sapere qualcosa sul libro [la divina commedia](nome_libro)
+    - mi sai dire qualcosa sul libro [il gattopardo](nome_libro)
+    - che cosa mi puoi dire sul libro [l'idiota](nome_libro)
+    - vorrei sapere di più sul libro [se questo è un uomo](nome_libro)
+    - puoi dirmi qualcosa sul libro [il gattopardo](nome_libro)
+    - fammi conoscere i dettagli del libro [il cacciatore di aquiloni](nome_libro)
+    - hai informazioni dettagliate su [cent'anni di solitudine](nome_libro)?
+    - cosa puoi dirmi sul libro [il signore degli anelli-il ritorno del re](nome_libro)?
+    - quali sono le caratteristiche principali di [il signore degli anelli-il ritorno del re](nome_libro)?
+    - mi interessa conoscere i dettagli del libro [il signore degli anelli-le due torri](nome_libro)
+
 
 - intent: info_prezzo
   examples: |
@@ -201,6 +209,10 @@ nlu:
     - qual è il costo del libro?
     - a quanto viene il libro?
     - sapresti dirmi quanto devo pagare per il libro?
+    - vorrei conoscere il costo del libro
+    - sapresti dirmi quanto costa?
+    - mi interesserebbe sapere il prezzo del libro
+    - posso avere informazioni sul costo?
 
 - intent: info_età_consigliata
   examples: |
@@ -236,7 +248,9 @@ nlu:
     - madame bovary
     - anna karenina
     - orgoglio e pregiudizio
-    - il signore degli anelli
+    - il signore degli anelli-la compagnia dell'anello
+    - il signore degli anelli-le due torri
+    - il signore degli anelli-il ritorno del re
     - cent'anni di solitudine
     - lolita
     - il signore delle mosche

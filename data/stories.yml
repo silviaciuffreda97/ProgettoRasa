@@ -66,7 +66,8 @@ stories:
   - intent: info_libro
     entities:
     - nome_libro: "la divina commedia"
-  - action: action_info_libro
+  - action: action_find_info_libro
+  #- action: action_info_libro
   - intent: info_età_consigliata
   - action: action_info_età_consigliata
   - intent: info_prezzo
@@ -84,7 +85,8 @@ stories:
   - intent: info_libro
     entities:
     - nome_libro: "orgoglio e pregiudizio"
-  - action: action_info_libro
+  - action: action_find_info_libro
+ # - action: action_info_libro
   - intent: info_età_consigliata
   - action: action_info_età_consigliata
   - intent: info_prezzo
@@ -106,13 +108,39 @@ stories:
   - intent: info_libro
     entities:
     - nome_libro: "l'idiota"
-  - action: action_info_libro
+  - action: action_find_info_libro
+ # - action: action_info_libro
   - intent: info_età_consigliata
   - action: action_info_età_consigliata
   - intent: info_prezzo
   - action: action_info_prezzo
   - intent: info_reparto
   - action: action_info_reparto
+
+
+
+# - story: informazione libro 4
+#   steps:
+#   - intent: saluto
+#   - action: utter_saluto
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affermazione
+#   - action: utter_si_psi
+#   - intent: info_libro
+#     entities:
+#     - nome_libro: "il signore degli anelli-il ritorno del re"
+#   - action: action_find_info_libro
+#  # - action: action_info_libro
+#   - intent: info_età_consigliata
+#   - action: action_info_età_consigliata
+#   - intent: info_prezzo
+#   - action: action_info_prezzo
+#   - intent: info_reparto
+#   - action: action_info_reparto
+
+
  
 
 

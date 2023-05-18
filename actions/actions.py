@@ -19,23 +19,34 @@ from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
 from rasa_sdk.events import SlotSet
 from rasa_sdk.events import AllSlotsReset
 
-
-class ActionInfoLibro(Action):
+        
+class ActionFindInfoLibro(Action):
 
     def name(self) -> Text:
-        return "action_info_libro"
-    
+        return "action_find_info_libro"
+
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        titolo_libro = str(tracker.get_slot('nome_libro')).lower()  # Nome dello slot da prendere: nome_libro
-
+        
+        titolo_libro = str(tracker.get_slot('nome_libro')).lower() #Nome dello slot da prendere: nome_libro
         libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
+        
+        selections = []
 
+        # Creo una lista  con tutti i libri il cui nome contiene il nome inserito dall'utente
         for index, row in libro.iterrows():
+            if titolo_libro.lower() == row['Titolo'].lower():
+                selections.append([row['Titolo']])
+                break
+            elif titolo_libro.lower() in row['Titolo'].lower():
+                selections.append([row['Titolo']])
+                
+        
+        if len(selections) == 1:
+         #for index, row in libro.iterrows():
             if row['Titolo'] == titolo_libro:
                 autore = row['Autore']
                 genere = row['Genere']
-                età = row['Età']
+                #età = row['Età']
                 trama = row['Descrizione']
 
                 message = f"Il libro '{titolo_libro}' è stato scritto da {autore} e appartiene al genere '{genere}'.\n'{titolo_libro}' è {trama}"
@@ -44,8 +55,20 @@ class ActionInfoLibro(Action):
             
             dispatcher.utter_message(text=message)
 
-            return [FollowupAction("utter_another_question")]
+            return [FollowupAction("utter_another_question")] 
+           
         
+        elif len(selections) > 1:
+            output = "Ho trovato più libri che corrispondono al titolo che stai cercando. Per favore riformula con uno dei seguenti nomi dei libri:\n"
+            for selection in selections:
+                output += ('- '+selection[0]+"\n")
+            dispatcher.utter_message(text=output)  
+            return [AllSlotsReset()]
+            
+        elif len(selections) == 0:
+            output = "Mmm...non ho capito bene, sei sicuro/a che il nome del libro sia corretto?"
+            dispatcher.utter_message(text=output) 
+            return [] 
 
 
 class ActionInfoPrezzo(Action):
@@ -96,7 +119,7 @@ class ActionInfoEtàConsigliata(Action):
         return [SlotSet("nome_libro", nome_libro)]
 
 
-class ActionInfoEtàConsigliata(Action):
+class ActionInfoReparto(Action):
     def name(self) -> Text:
         return "action_info_reparto"
 
@@ -122,31 +145,3 @@ class ActionInfoEtàConsigliata(Action):
 
 
 
-
-
-
-# class ActionInfoLibro(Action):
-
-#     def name(self) -> Text:
-#         return "action_info_libro"
-    
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#         titolo_libro = str(tracker.get_slot('nome_libro')).lower()  # Nome dello slot da prendere: nome_libro
-  
-#         libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
-
-#         try:
-#             autore = libro[libro['Titolo'] == titolo_libro]['Autore'].values[0]
-#             genere = libro[libro['Titolo'] == titolo_libro]['Genere'].values[0]
-#             eta = libro[libro['Titolo'] == titolo_libro]['Età'].values[0]
-#            # prezzo = libro[libro['Titolo'] == titolo_libro]['Prezzo'].values[0]
-#             descrizione = libro[libro['Titolo'] == titolo_libro]['Descrizione'].values[0]
-
-#             message = f"Il libro '{titolo_libro}' è stato scritto da {autore} ed appartiene al genere '{genere}'.\n'{titolo_libro}' è {descrizione}"
-#         except:
-#             message = f"Mi dispiace, non sono riuscito a trovare informazioni sull'autore del libro '{titolo_libro}'."
-
-#         dispatcher.utter_message(text=message)
-
-#         return []
