@@ -1,6 +1,0 @@
-[
-  {
-    "name": "nome_libro",
-    "pattern": "(\\b1984\\b|\\bIl\\ nome\\ della\\ rosa\\b|\\bLa\\ divina\\ commedia\\b|\\bDon\\ Chisciotte\\b|\\bGuerra\\ e\\ pace\\b|\\bIl\\ gattopardo\\b|\\bMoby\\ Dick\\b|\\bL'idiota\\b|\\bCime\\ tempestose\\b|\\bIl\\ cacciatore\\ di\\ aquiloni\\b|\\bSe\\ questo\\ è\\ un\\ uomo\\b|\\bMadame\\ bovary\\b|\\bAnna\\ karenina\\b|\\bOrgoglio\\ e\\ pregiudizio\\b|\\bIl\\ signore\\ degli\\ anelli\\b|\\bIl\\ piccolo\\ principe\\b|\\bCent'anni\\ di\\ solitudine\\b|\\bLolita\\b)"
-  }
-]

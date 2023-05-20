@@ -55,7 +55,7 @@ class ActionFindInfoLibro(Action):
             
             dispatcher.utter_message(text=message)
 
-            return [FollowupAction("utter_another_question")] 
+            return [FollowupAction("utter_another_question"), SlotSet ("nome_libro", titolo_libro)]
            
         
         elif len(selections) > 1:
@@ -78,21 +78,26 @@ class ActionInfoPrezzo(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Estrarre l'entità dal messaggio precedente
         
-        nome_libro = tracker.get_slot("nome_libro")
+        titolo_libro = tracker.get_slot("nome_libro")
 
         libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
+        prezzo = None
         # Fare qualcosa con l'entità
-        if nome_libro:
-            for index, row in libro.iterrows():
-             prezzo = row['Prezzo']
-          
-            # Utilizzare l'entità nel messaggio di risposta
-            message = f"Presso la nostra libreria il libro '{nome_libro}' è disponibile al prezzo di € {prezzo}."
+        #if nome_libro:
+        #if nome_libro == row['Titolo']:
+        
+        for index, row in libro.iterrows():
+            if titolo_libro.lower() == row['Titolo'].lower():
+              prezzo = row['Prezzo']
+              break   
+
+        if prezzo: 
+            message = f"Presso la nostra libreria il libro '{titolo_libro}' è disponibile al prezzo di € {prezzo}."
         else:
             message = f"Nessun prezzo trovato."
 
         dispatcher.utter_message(text=message)
-        return [SlotSet("nome_libro", nome_libro)]
+        return [SlotSet("nome_libro", titolo_libro)]
     
 
 class ActionInfoEtàConsigliata(Action):
@@ -102,21 +107,24 @@ class ActionInfoEtàConsigliata(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Estrarre l'entità dal messaggio precedente
         
-        nome_libro = tracker.get_slot("nome_libro")
+        titolo_libro = tracker.get_slot("nome_libro")
 
         libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
         # Fare qualcosa con l'entità
-        if nome_libro:
-            for index, row in libro.iterrows():
-             età = row['Età']
-          
+        età = None
+        for index, row in libro.iterrows():
+             if titolo_libro.lower() == row['Titolo'].lower():
+              età = row['Età']
+              break
+        
+        if età:
             # Utilizzare l'entità nel messaggio di risposta
-            message = f"La lettura del libro '{nome_libro}' è consigliata per età a partire da {età}."
+            message = f"La lettura del libro '{titolo_libro}' è consigliata per età a partire da {età}."
         else:
             message = f"Nessuna fascia d'età trovata."
 
         dispatcher.utter_message(text=message)
-        return [SlotSet("nome_libro", nome_libro)]
+        return [SlotSet("nome_libro", titolo_libro)]
 
 
 class ActionInfoReparto(Action):
@@ -126,17 +134,21 @@ class ActionInfoReparto(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Estrarre l'entità dal messaggio precedente
         
-        nome_libro = tracker.get_slot("nome_libro")
+        titolo_libro = tracker.get_slot("nome_libro")
 
         libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
+        reparto = None
+        scaffale = None
         # Fare qualcosa con l'entità
-        if nome_libro:
-            for index, row in libro.iterrows():
-             reparto = row['Reparto']
-             scaffale = row['Scaffale']
+        
+        for index, row in libro.iterrows():
+             if titolo_libro.lower() == row['Titolo'].lower():
+              reparto = row['Reparto']
+              scaffale = row['Scaffale']
+              break
           
-            # Utilizzare l'entità nel messaggio di risposta
-            message = f"Il libro '{nome_libro}' è collocato nella seguente posizione:\n Reparto:{reparto} Scaffale:{scaffale}.\n\n"
+        if reparto:
+            message = f"Il libro '{titolo_libro}' è collocato nella seguente posizione:\n Reparto:{reparto} Scaffale:{scaffale}.\n\n"
         else:
             message = f"Nessuna collocazione trovata."
 

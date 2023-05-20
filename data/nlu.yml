@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: saluto
   examples: |
@@ -15,8 +14,6 @@ nlu:
     - buondi
     - wei
     - ue
-    - cia
-
 - intent: goodbye
   examples: |
     - Addio
@@ -30,7 +27,6 @@ nlu:
     - Buona giornata, alla prossima
     - Ci vediamo, è stato un piacere parlare con te
     - A presto, grazie ancora
-
 - intent: bot_challenge
   examples: |
     - sei un bot?
@@ -39,7 +35,6 @@ nlu:
     - sto parlando con un umano?
     - sei vivo?
     - chi sei?
-
 - intent: affermazione
   examples: |
     - yes
@@ -48,7 +43,6 @@ nlu:
     - ovvio
     - coretto
     - certamente
-
 - intent: negazione
   examples: |
     - no
@@ -60,7 +54,6 @@ nlu:
     - none
     - nu
     - veramente no
-
 - intent: mood_great
   examples: |
     - Sto bene
@@ -69,7 +62,6 @@ nlu:
     - Sono soddisfatto
     - Mi sento bene
     - Sono allegro
-
 - intent: mood_unhappy
   examples: |
     - Non mi sento bene
@@ -83,7 +75,6 @@ nlu:
     - sto male
     - mi gira la testa
     - mi viene da vomitare
-
 - intent: info_biblioteca
   examples: |
     - dimmi qualcosa sulla biblioteca
@@ -92,9 +83,7 @@ nlu:
     - da quanto esiste la bibliteca?
     - parlami della biblioteca
     - dove vi trovate?
-    - parlami della biblioteca
     - descrivimi la biblioteca
-
 - intent: servizi
   examples: |
     - che servizi offri?
@@ -102,7 +91,6 @@ nlu:
     - che servizi offre la biblioteca?
     - che lavoro svolgi?
     - che servizi offrite?
-
 - intent: eventi
   examples: |
     - che eventi ci sono in programma?
@@ -112,7 +100,6 @@ nlu:
     - qual è il prossimo evento?
     - quando ci sarà il prossimo evento?
     - c'è qualche evento in programma?
-
 - intent: info_ok
   examples: |
     - ok grazie
@@ -120,7 +107,6 @@ nlu:
     - le inforazioni sono chiare
     - va bene grazie
     - grazie sei stato utile
-
 - intent: orario
   examples: |
     - a che ora apre la biblioteca?
@@ -132,7 +118,6 @@ nlu:
     - la biblioteca è chiusa?
     - qual è l'orario di apertura?
     - che giorni siete aperti?
-
 - intent: rent_book
   examples: |
     - vorrei prendere in prestito un libro
@@ -150,7 +135,6 @@ nlu:
     - Potrei Ottenere l'autorizzazione di prestito di un libro
     - Voglio richiedere il prestito temporaneo di un libro
     - vorrei prenotare un libro
-
 - intent: inform
   examples: |
     - Vorrei prendere in prestito [1984](nome_libro) di [George Orwell](nome_autore).
@@ -168,7 +152,6 @@ nlu:
     - Mi piacerebbe prendere in prestito '[Crime and Punishment](nome_libro)' di [Fyodor Dostoevsky](nome_autore). È disponibile in biblioteca?
     - Vorrei leggere '[War and Peace](nome_libro)' di [Leo Tolstoy](nome_autore). Potrei prenderlo in prestito?
     - Sarei interessato a leggere '[The Hobbit](nome_libro)' di [J.R.R. Tolkien](nome_autore). È disponibile in biblioteca?
-
 - intent: info_libro
   examples: |
     - vorrei informazioni sul libro [1984](nome_libro)
@@ -200,8 +183,9 @@ nlu:
     - cosa puoi dirmi sul libro [il signore degli anelli-il ritorno del re](nome_libro)?
     - quali sono le caratteristiche principali di [il signore degli anelli-il ritorno del re](nome_libro)?
     - mi interessa conoscere i dettagli del libro [il signore degli anelli-le due torri](nome_libro)
+    - posso avere informazioni sul contenuto di [il signore degli anelli-il ritorno del re](nome_libro)?
 
-
+  
 - intent: info_prezzo
   examples: |
     - quanto costa il libro?
@@ -213,15 +197,13 @@ nlu:
     - sapresti dirmi quanto costa?
     - mi interesserebbe sapere il prezzo del libro
     - posso avere informazioni sul costo?
-
 - intent: info_età_consigliata
   examples: |
-     - a quale età è consigliato leggere questo libro?
-     - qual è la fascia d'età raccomandata per questo libro?
-     - posso sapere per quale fascia d'età è adatto questo libro?
-     - chi è il target di lettura per questo libro?
-     - questo libro è adatto a quali gruppi di età?
-
+    - a quale età è consigliato leggere questo libro?
+    - qual è la fascia d'età raccomandata per questo libro?
+    - posso sapere per quale fascia d'età è adatto questo libro?
+    - chi è il target di lettura per questo libro?
+    - questo libro è adatto a quali gruppi di età?
 - intent: info_reparto
   examples: |
     - in quale reparto posso trovare questo libro?
@@ -229,9 +211,6 @@ nlu:
     - mi puoi dire in quale reparto si trova il libro?
     - mi sai dire reparto e scaffale di questo libro?
     - sai dirmi a quale scaffale appartiene il libro?
-
-
-
 - lookup: nome_libro
   examples: |
     - 1984

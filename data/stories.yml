@@ -69,10 +69,16 @@ stories:
   - action: action_find_info_libro
   #- action: action_info_libro
   - intent: info_età_consigliata
+    entities:
+    - nome_libro: "la divina commedia"
   - action: action_info_età_consigliata
   - intent: info_prezzo
+    entities:
+    - nome_libro: "la divina commedia"
   - action: action_info_prezzo
   - intent: info_reparto
+    entities:
+    - nome_libro: "la divina commedia"
   - action: action_info_reparto
   
 
@@ -88,10 +94,16 @@ stories:
   - action: action_find_info_libro
  # - action: action_info_libro
   - intent: info_età_consigliata
+    entities:
+    - nome_libro: "orgoglio e pregiudizio"
   - action: action_info_età_consigliata
   - intent: info_prezzo
+    entities:
+    - nome_libro: "orgoglio e pregiudizio"
   - action: action_info_prezzo
   - intent: info_reparto
+    entities:
+    - nome_libro: "orgoglio e pregiudizio"
   - action: action_info_reparto
   
 
@@ -111,10 +123,16 @@ stories:
   - action: action_find_info_libro
  # - action: action_info_libro
   - intent: info_età_consigliata
+    entities:
+    - nome_libro: "l'idiota"
   - action: action_info_età_consigliata
   - intent: info_prezzo
+    entities:
+    - nome_libro: "l'idiota"
   - action: action_info_prezzo
   - intent: info_reparto
+    entities:
+    - nome_libro: "l'idiota"
   - action: action_info_reparto
 
 
@@ -143,9 +161,3 @@ stories:
 
  
 
-
-  
-
-
-
-    

@@ -1,83 +1,63 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - saluto
-  - goodbye
-  - affermazione
-  - negazione
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - servizi
-  - eventi
-  - info_biblioteca
-  - info_ok
-  - orario
-  - rent_book
-  - inform
-  - info_libro:
-        use_entities: true
-  - info_prezzo
-  - info_età_consigliata
-  - info_reparto
-
+- affermazione
+- bot_challenge
+- eventi
+- goodbye
+- info_biblioteca
+- info_età_consigliata
+- info_libro:
+    use_entities: true
+- info_ok
+- info_prezzo
+- info_reparto
+- inform
+- mood_great
+- mood_unhappy
+- negazione
+- orario
+- rent_book
+- saluto
+- servizi
 responses:
   utter_saluto:
-  - text: "Ciao caro, sono il bot della libreria. Puoi chiedermi informazioni sulla biblioteca e quali servizi offriamo."
-
+  - text: Ciao caro, sono il bot della libreria. Puoi chiedermi informazioni sulla biblioteca e quali servizi offriamo.
   utter_goodbye:
-  - text: "Arrivederci, a presto."
-
+  - text: Arrivederci, a presto.
   utter_iamabot:
-  - text: "CIao! Sono un bot di proprietà Rasa."
-
+  - text: CIao! Sono un bot di proprietà Rasa.
   utter_happy:
-  - text: "Beato te!"
-
+  - text: Beato te!
   utter_cheer_up:
-  - text: "Potresti prendere in prestito un libro dalla biblioteca."
-
+  - text: Potresti prendere in prestito un libro dalla biblioteca.
   utter_did_that_help:
-  - text: "Che ne pensi di questa proposta?"
-    
+  - text: Che ne pensi di questa proposta?
   utter_riformula:
-  - text: "Non ho capito caro, potresti riformulare?"
-
+  - text: Non ho capito caro, potresti riformulare?
   utter_no_psi:
-  - text: "Mi dispiace di non esserti stato utile."
-
+  - text: Mi dispiace di non esserti stato utile.
   utter_si_psi:
-  - text: "Non c'è di che ;)"
-
+  - text: Non c'è di che ;)
   utter_servizi:
-  - text: "La biblioteca offre servizi di prestito libri ed organizza vari eventi. A cosa sei interessato?"
-
+  - text: La biblioteca offre servizi di prestito libri ed organizza vari eventi. A cosa sei interessato?
   utter_eventi:
-  - text: "Il prossimo evento si terrà a Luglio 2023."
-
+  - text: Il prossimo evento si terrà a Luglio 2023.
   utter_info_biblioteca:
-  - text: "La biblioteca è stata fondata nel 1919 nel comune di Ancona, in via San Benedetto. "
-
+  - text: 'La biblioteca è stata fondata nel 1919 nel comune di Ancona, in via San Benedetto. '
   utter_info_ok:
-  - text: "Sono contento di esserti stato utile. Rimango qui a tua disposizione."
-
+  - text: Sono contento di esserti stato utile. Rimango qui a tua disposizione.
   utter_orario:
-  - text: "La biblioteca è aperta dal Lunedì al Venerdì dalle ore 9:00 alle 18:00."
-
+  - text: La biblioteca è aperta dal Lunedì al Venerdì dalle ore 9:00 alle 18:00.
   utter_more_info:
-  - text: "Per ulteriori informazioni ti consiglio di rivolgerti al personale della libreria."
-
+  - text: Per ulteriori informazioni ti consiglio di rivolgerti al personale della libreria.
   utter_another_question:
-  - text: "Che altro vuoi sapere?"
-  - text: "Chiedimi qualcos'altro"
-  - text: "Puoi chiedermi altro, se vuoi"
-  - text: "Fammi un'altra domanda"
-
-
+  - text: Che altro vuoi sapere?
+  - text: Chiedimi qualcos'altro
+  - text: Puoi chiedermi altro, se vuoi
+  - text: Fammi un'altra domanda
 entities:
 - nome_libro
 - nome_autore
-
 slots:
   nome_libro:
     type: text
@@ -91,39 +71,34 @@ slots:
     mappings:
     - type: from_entity
       entity: nome_autore
-  
-
 actions:
-  - utter_saluto
-  - utter_goodbye
-  - utter_iamabot
-  - utter_happy
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_riformula
-  - utter_no_psi
-  - utter_si_psi
-  - utter_servizi
-  - utter_eventi
-  - utter_info_biblioteca
-  - utter_info_ok
-  - utter_orario
- # - action_info_libro
-  - action_info_prezzo
-  - utter_another_question
-  - action_info_età_consigliata
-  - action_info_reparto
-  - utter_more_info
-  - action_find_info_libro
-
+- utter_another_question
+- utter_saluto
+- action_find_info_libro
+- utter_goodbye
+- utter_iamabot
+- utter_happy
+- utter_cheer_up
+- utter_did_that_help
+- utter_riformula
+- utter_no_psi
+- utter_si_psi
+- utter_servizi
+- utter_eventi
+- utter_info_biblioteca
+- utter_info_ok
+- utter_orario
+- action_info_prezzo
+- action_info_età_consigliata
+- action_info_reparto
+- utter_more_info
 forms:
   rent_book_form:
     required_slots:
-      - nome_libro
-      - nome_autore 
-
+    - nome_libro
+    - nome_autore
 config:
-    store_entities_as_slots: true
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
