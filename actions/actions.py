@@ -153,7 +153,103 @@ class ActionInfoReparto(Action):
             message = f"Nessuna collocazione trovata."
 
         dispatcher.utter_message(text=message)
-        return [FollowupAction("utter_more_info"), AllSlotsReset()]
+        return [FollowupAction("utter_more_info")]
 
 
+class ActionFindAutoreLibro(Action):
 
+    def name(self) -> Text:
+        return "action_autore_libro"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        autore_libro = str(tracker.get_slot('autore_libro')) #Nome dello slot da prendere
+        libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
+        
+        selections = []
+
+        # Creo una lista  con tutti i libri il cui nome contiene il nome inserito dall'utente
+        for index, row in libro.iterrows():
+            if autore_libro == row['Autore']:
+                selections.append([row['Titolo']])
+                break
+            elif autore_libro.lower() in row['Autore'].lower():
+                selections.append([row['Titolo']])
+             
+        if selections:
+            output = "I libri disponibili dell'autore che stai cercando sono i seguenti:\n"
+            for selection in selections:
+                output += ('- '+selection[0]+"\n")
+            dispatcher.utter_message(text=output)  
+            return [AllSlotsReset()]
+            
+        elif len(selections) == 0:
+            output = "Mmm...non ho capito bene, sei sicuro/a che il nome dell'autore sia corretto?"
+            dispatcher.utter_message(text=output) 
+            return [] 
+
+
+class ActionFindEtàLibro(Action):
+
+    def name(self) -> Text:
+        return "action_età_libro"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        età_libro = str(tracker.get_slot('età_libro')) #Nome dello slot da prendere
+        libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
+        
+        selections = []
+
+        # Creo una lista  con tutti i libri il cui nome contiene il nome inserito dall'utente
+        for index, row in libro.iterrows():
+            if età_libro == row['Età']:
+                selections.append([row['Titolo']])
+                break
+            elif età_libro in row['Età']:
+                selections.append([row['Titolo']])
+             
+        if selections:
+            output = "I libri disponibili per l'età che stai cercando sono i seguenti:\n"
+            for selection in selections:
+                output += ('- '+selection[0]+"\n")
+            dispatcher.utter_message(text=output)  
+            return [AllSlotsReset()]
+            
+        elif len(selections) == 0:
+            output = "Mmm...non ho capito bene, sei sicuro/a che l'età sia corretta?"
+            dispatcher.utter_message(text=output) 
+            return [] 
+
+
+class ActionFindGenereLibro(Action):
+
+    def name(self) -> Text:
+        return "action_genere_libro"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        genere_libro = str(tracker.get_slot('genere_libro')) #Nome dello slot da prendere
+        libro = pd.read_csv('datasets/libri.csv', encoding="UTF-8", sep=";")
+        
+        selections = []
+
+        # Creo una lista  con tutti i libri il cui nome contiene il nome inserito dall'utente
+        for index, row in libro.iterrows():
+            if genere_libro == row['Genere']:
+                selections.append([row['Titolo']])
+                #break
+            elif genere_libro in row['Genere']:
+                selections.append([row['Titolo']])
+             
+        if selections:
+            output = "I libri disponibili per il genere che stai cercando sono i seguenti:\n"
+            for selection in selections:
+                output += ('- '+selection[0]+"\n")
+            dispatcher.utter_message(text=output)  
+            return [AllSlotsReset()]
+            
+        elif len(selections) == 0:
+            output = "Mmm...non ho capito bene, sei sicuro/a che il genere sia corretto?"
+            dispatcher.utter_message(text=output) 
+            return [] 

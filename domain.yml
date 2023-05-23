@@ -19,6 +19,14 @@ intents:
 - rent_book
 - saluto
 - servizi
+- info_autore:
+    use_entities: true
+- info_età:
+    use_entities: true
+- info_genere:
+    use_entities: true
+
+
 responses:
   utter_saluto:
   - text: Ciao caro, sono il bot della libreria. Puoi chiedermi informazioni sulla biblioteca e quali servizi offriamo.
@@ -55,9 +63,13 @@ responses:
   - text: Chiedimi qualcos'altro
   - text: Puoi chiedermi altro, se vuoi
   - text: Fammi un'altra domanda
+
 entities:
 - nome_libro
-- nome_autore
+- autore_libro
+- età_libro
+- genere_libro
+
 slots:
   nome_libro:
     type: text
@@ -65,12 +77,25 @@ slots:
     mappings:
     - type: from_entity
       entity: nome_libro
-  nome_autore:
+  autore_libro:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: nome_autore
+      entity: autore_libro
+  età_libro:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: età_libro
+  genere_libro:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genere_libro
+
 actions:
 - utter_another_question
 - utter_saluto
@@ -92,11 +117,17 @@ actions:
 - action_info_età_consigliata
 - action_info_reparto
 - utter_more_info
+- action_autore_libro
+- action_età_libro
+- action_genere_libro
+
 forms:
   rent_book_form:
     required_slots:
     - nome_libro
     - nome_autore
+
+
 config:
   store_entities_as_slots: true
 session_config:

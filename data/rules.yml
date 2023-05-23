@@ -63,3 +63,18 @@ rules:
   steps: 
   - intent: info_reparto
   - action: action_info_reparto
+
+- rule: Restituisce titolo libro da nome autore
+  steps:
+  - intent: info_autore
+  - action: action_autore_libro
+
+- rule: Restituisce titolo libri da età 
+  steps:
+  - intent: info_età
+  - action: action_età_libro
+
+- rule: Restituisce titolo libri da genere 
+  steps:
+  - intent: info_genere
+  - action: action_genere_libro

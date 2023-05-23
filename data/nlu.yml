@@ -211,6 +211,57 @@ nlu:
     - mi puoi dire in quale reparto si trova il libro?
     - mi sai dire reparto e scaffale di questo libro?
     - sai dirmi a quale scaffale appartiene il libro?
+
+- intent: info_autore
+  examples: |
+    - quali libri avete di [George Orwell](autore_libro)?
+    - quali libri hai di [Umberto Eco](autore_libro)?
+    - mi interessa leggere qualcosa di [Dante Alighieri](autore_libro). 
+    - mi piacerebbere leggere un libro di [Miguel de Cervantes](autore_libro) 
+    - quali libri avete a disposizione di [Lev Tolstoj](autore_libro)?
+    - quali libri sono disponibili di [Tomasi di Lampedusa](autore_libro)?
+    - mi puoi consigliare un libro di [Herman Melville](autore_libro) che avete in libreria?
+    - avete a disposizione qualche libro di [Fedor Dostoevskij](autore_libro)?
+    - hai un libro di [Emily Bronte](autore_libro)?
+    - sarei interessato ad un libro di [Khaled Hosseini](autore_libro), quali avete in libreria?
+    - che libro hai di [Primo Levi](autore_libro)?
+    - quali libri avete di [Jane Austen](autore_libro)?
+    - quale libro è a disposizione di [Michael Ende](autore_libro)?
+    - che libro c'è di [Gustave Flaubert](autore_libro)?
+    - vorrei leggere un libro di [Umberto Eco](autore_libro), quali avete in libreria?
+    - che hai di [Herman Melville](autore_libro)?
+    - che libri avete di [Primo Levi](autore_libro)?
+
+- intent: info_età
+  examples: |
+    - che libri avete per la fascia di età [12+](età_libro)
+    - quali libri ci sono per [14+](età_libro)?
+    - quali libri ci sono a disposizione per l'età [16+](età_libro)?
+    - che libri ci sarebbero per i [18+](età_libro)?
+    - dimmi i libri per la fascia di età [12+](età_libro)
+    - mostrami i libri per gli anni [14+](età_libro)
+    - fammi vedere che libri avete per gli anni [16+](età_libro)
+    - per gli anni [18+](età_libro) quali libri avete a disposizione in biblioteca?
+    - che libri possedete per gli anni [12+](età_libro)?
+    - fammi la lista dei libri disponibili per gli anni [14+](età_libro)
+    - che libri per l'età [14+](età_libro)?
+    - illustrami i libri per gli anni [16+](età_libro)
+
+- intent: info_genere
+  examples: |
+    - quali libri del genere [distopico](genere_libro) avete?
+    - che tipo di libri di genere [poesia](genere_libro) avete?
+    - avete a disposizione qualche libro del genere [storico](genere_libro)?
+    - che libri di genere [romantico](genere_libro) avete disponibili?
+    - che libri di genere [fantasy](genere_libro) avete in catalogo?
+    - mi potete indicare qualche libro del genere [saggio](genere_libro)?
+    - è disponibile un libro del genere [drammatico](genere_libro)?
+    - avete a disposizione libri sul genere [allegoria](genere_libro)?
+    - che libro sul genere [formazione](genere_libro) consigliereste
+    - quali libri del genere [realista](genere_libro) avete disponibili?
+    - mi interessa leggere un libro sul genere [avventura](genere_libro). Ne avete?
+    - che libri di genere [cavalleresco](genere_libro) posso trovare?
+
 - lookup: nome_libro
   examples: |
     - 1984
@@ -238,3 +289,51 @@ nlu:
     - la storia infinita
     - il grande gatsby
     - il conte di montecristo
+
+- lookup: autore_libro
+  examples: |
+    - George Orwell
+    - Umberto Eco
+    - Dante Alighieri
+    - Miguel de Cervantes
+    - Lev Tolstoj
+    - Tomasi di Lampedusa
+    - Herman Melville
+    - Fedor Dostoevskij
+    - Emily Bronte
+    - Khaled Hosseini
+    - Primo Levi
+    - Gustave Flaubert
+    - Lev Tolstoj
+    - William Golding
+    - Ernest Hemingway
+    - J.D. Salinger
+    - Michael Ende
+    - F. Scott Fitzgerald
+    - Gabriel Garcia Marquez
+    - Alexandre Dumas
+    - J.R.R. Tolkien
+    - Jane Austen
+
+- lookup: età_libro
+  examples: |
+    - 12+
+    - 14+
+    - 16+
+    - 18+
+
+- lookup: genere_libro
+  examples: |
+    - distopico
+    - storico
+    - poesia
+    - cavalleresco
+    - avventura
+    - psicologico
+    - romantico
+    - drammatico
+    - saggio
+    - realista
+    - formazione
+    - fantasy
+    - allegoria

@@ -65,7 +65,7 @@ pipeline:
 #al fine di addestrare modelli di apprendimento automatico per compiti come la classificazione del testo o l'estrazione di informazioni.
 #- name: "RegexFeaturizer"
 #componente NLP utilizzato per estrarre entità nominative da un testo utilizzando un modello basato su CRF
-- name: "CRFEntityExtractor"
+#- name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "SklearnIntentClassifier"
 # - name: CountVectorsFeaturizer

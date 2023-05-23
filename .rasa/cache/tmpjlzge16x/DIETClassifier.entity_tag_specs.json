@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-autore_libro",
+      "2": "I-autore_libro",
+      "3": "L-autore_libro",
+      "4": "U-autore_libro",
+      "5": "B-età_libro",
+      "6": "I-età_libro",
+      "7": "L-età_libro",
+      "8": "U-età_libro",
+      "9": "B-nome_autore",
+      "10": "I-nome_autore",
+      "11": "L-nome_autore",
+      "12": "U-nome_autore",
+      "13": "B-nome_libro",
+      "14": "I-nome_libro",
+      "15": "L-nome_libro",
+      "16": "U-nome_libro",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-autore_libro": 1,
+      "I-autore_libro": 2,
+      "L-autore_libro": 3,
+      "U-autore_libro": 4,
+      "B-età_libro": 5,
+      "I-età_libro": 6,
+      "L-età_libro": 7,
+      "U-età_libro": 8,
+      "B-nome_autore": 9,
+      "I-nome_autore": 10,
+      "L-nome_autore": 11,
+      "U-nome_autore": 12,
+      "B-nome_libro": 13,
+      "I-nome_libro": 14,
+      "L-nome_libro": 15,
+      "U-nome_libro": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
